@@ -5,6 +5,10 @@ import Wordle from './Wordle'
 
 function App() {
 
+  function refreshPage() {
+    window.location.reload(false);
+  }
+
   const[solution, setSolution] = useState(null)
 
   useEffect(() => {
@@ -15,13 +19,20 @@ function App() {
       const randomWord = json[Math.floor(Math.random()*json.length)]
       setSolution(randomWord.word)
     })
+
+
   }, [setSolution])
 
   return (
     <div className="App">
     
+    
        <h1>Wordle Dordle</h1>
+       <div>
+      <button onClick={refreshPage}>Click to reload!</button>
+    </div>
       { solution &&  <Wordle solution = {solution} /> }
+     
     </div>
   );
 }
