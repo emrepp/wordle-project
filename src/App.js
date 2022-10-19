@@ -1,5 +1,10 @@
 import { useEffect, useState } from "react";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Wordle from './Wordle'
+import Header from "./Header";
+import AddWord from "./AddWord";
+import About from "./About"
+
 
 
 
@@ -10,6 +15,7 @@ function App() {
   }
 
   const[solution, setSolution] = useState(null)
+
 
   useEffect(() => {
     fetch('http://localhost:3001/solutions')
@@ -25,15 +31,34 @@ function App() {
 
   return (
     <div className="App">
-    
-    
-       <h1>Wordle Dordle</h1>
-       <div>
+      <div><h1>Wordle Dordle</h1></div>
+     
+      <BrowserRouter>
+      <div >
+        <Header />
+        
+        <Routes>
+          <Route path="/" element={<App/>} />
+          <Route path="/addWord" element={<AddWord />} />
+          <Route path="/about" element={<About />} />
+          
+        </Routes>
+      </div>
+    </BrowserRouter>
+       
+     
+    <div>
+      { solution &&  <Wordle solution = {solution} /> }
+    </div>
+
+    <div>
       <button onClick={refreshPage}>Click to reload!</button>
     </div>
-      { solution &&  <Wordle solution = {solution} /> }
-     
-    </div>
+   
+</div>
+
+
+
   );
 }
 

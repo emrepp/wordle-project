@@ -58,3 +58,13 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 1px;
 }
+
+.header {
+  display: "inline-block";
+  width: "50px";
+  padding: "12px";
+  margin: "0 6px 6px";
+  background: "yellow";
+  textDecoration: "none";
+  color: "white";
+}
