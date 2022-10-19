@@ -1,19 +1,39 @@
 import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
+import {useNavigate} from 'react-router-dom';
 
 export default function AddWord() {
   const [word, setword] = useState('');
   //onst [show, setShow] = useState(false);
+  //const [isPending, setIsPending] = useState(false);
+  const navigate = useNavigate();
 
   
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    //const input = {word};
+    const input = {word};
 
-  console.log(word)
+    //setIsPending(true);
+
+  fetch('http://localhost:3001/solutions', {
+    method: 'POST',
+    headers: { "Content-Type": "application/json"},
+    body: JSON.stringify(input),
+
+  }).then(() => {
+    console.log('new word added')
+    //setIsPending(false);
+  })
+
+  navigate('/wordadded');
+  
+}
+  
+  
+
    
-  }
+  
 
  
 
@@ -22,7 +42,7 @@ export default function AddWord() {
   return (
 
         <div className="addwords">  
-            <h2>Add five letter words to the Wordle Dordle database:</h2>
+            <div>Add five letter words to the Wordle Dordle database:</div>
         
         <br>
         </br>
@@ -39,7 +59,8 @@ export default function AddWord() {
       <br>
       </br>
      
-      <button>Submit</button>
+     {<button>Submit</button>} 
+    
     </form>
     
     </div>
