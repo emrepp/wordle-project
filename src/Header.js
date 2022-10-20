@@ -42,14 +42,7 @@ export default function NavBar() {
       </NavLink>
 
      
-      <NavLink
-        to="/worddata"
-        exact="true"
-        style={linkStyles}
-       
-      >
-        Words
-        </NavLink>
+      
     </div>
   );
 }

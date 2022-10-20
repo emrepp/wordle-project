@@ -4,6 +4,8 @@ import Wordle from './Wordle'
 import Header from "./Header";
 import AddWord from "./AddWord";
 import About from "./About"
+import WordAdded from "./WordAdded"
+
 
 
 
@@ -41,11 +43,13 @@ function App() {
           <Route path="/" element={<App/>} />
           <Route path="/addWord" element={<AddWord />} />
           <Route path="/about" element={<About />} />
+          <Route path="/wordadded" element={<WordAdded/>}/>
+          
           
         </Routes>
       </div>
     </BrowserRouter>
-       
+    
      
     <div>
       { solution &&  <Wordle solution = {solution} /> }
@@ -54,6 +58,7 @@ function App() {
     <div>
       <button onClick={refreshPage}>Click to reload!</button>
     </div>
+   
    
 </div>
 
