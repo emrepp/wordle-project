@@ -1,5 +1,5 @@
 import React from 'react'
-export default function WordAdded() {
+export default function WordAdded( ) {
   
     function refreshPage() {
         window.location.reload(false);
@@ -7,6 +7,7 @@ export default function WordAdded() {
 
 
     return (
-      <div>WordAdded {refreshPage}</div>
+      <div>{refreshPage}</div>
+      
     )
 }

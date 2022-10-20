@@ -2,7 +2,7 @@ import { useState } from 'react';
 import ReactDOM from 'react-dom/client';
 import {useNavigate} from 'react-router-dom';
 
-export default function AddWord() {
+export default function AddWord({currentGuess}) {
   const [word, setword] = useState('');
   //onst [show, setShow] = useState(false);
   //const [isPending, setIsPending] = useState(false);
@@ -13,6 +13,7 @@ export default function AddWord() {
   const handleSubmit = (event) => {
     event.preventDefault();
     const input = {word};
+   const letters = {currentGuess};
 
     //setIsPending(true);
 
@@ -54,12 +55,17 @@ export default function AddWord() {
           required
           value={word}
           onChange={(e) => setword(e.target.value)}
+         
         />
       
       <br>
       </br>
+      <br>
+      </br>
      
      {<button>Submit</button>} 
+     <br>
+     </br>
     
     </form>
     

@@ -68,3 +68,7 @@ h1 {
   textDecoration: "none";
   color: "white";
 }
+
+.about li {
+  list-style-type: none;  
+}
