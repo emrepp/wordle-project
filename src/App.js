@@ -1,9 +1,10 @@
 import { useEffect, useState } from "react";
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, BrowserRouter, Route } from "react-router-dom";
 import Wordle from './Wordle'
 import Header from "./Header";
 import AddWord from "./AddWord";
 import About from "./About"
+import WordAdded from "./WordAdded"
 import WordData from "./WordData"
 
 
@@ -27,7 +28,6 @@ function App() {
       const randomWord = json[Math.floor(Math.random()*json.length)]
       setSolution(randomWord.word)
     })
-  
 
 
   }, [setSolution])
@@ -41,16 +41,14 @@ function App() {
         <Header />
         
         <Routes>
-          <Route path="/wordle-project" element={<App/>} />
-          <Route path="/addWord" element={<AddWord />}/>
-          <Route path="/about" element={<About />}/>
+          <Route path="/" element={<useWordle/>} />
+          <Route path="/addWord" element={<AddWord />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/worddata" element={<WordData/>}/>
           
-          <Route path = "/worddata" element={<WordData/>}/>
-          </Routes>
-         
+        </Routes>
       </div>
-      </BrowserRouter>
-    
+    </BrowserRouter>
     
      
     <div>
@@ -77,33 +75,19 @@ previous guesses (an array of arrays of letter objects), each object is a letter
 current string being guessed
 letters on the keypad (array of letter objects that include color options)
 number of turns
-
 game: enter words
 user enters letter, square holds the letter
 letters can be deleted
 submit submits the word on the row
 if the squares are not filled - error
 if word has already been used - error
-
 each letter is checkwed to see if it matches the solution(location in word and if the letter is used at all)
-
 correct letter and position is green
 correct letter, wrong position is yellow
 non-match stay plain
-
 guess stays on grid with colors
-
 moves to next row for next guess
-
 letters below change colors with every word submit
-
 when the word matches the solution, send a modal or something
-
 when user runs out of guesses, a different modal
-
-
 need about page and option for a separate page with more letters (possibly) (router) */
-
-
-
-
