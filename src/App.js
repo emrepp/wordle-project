@@ -4,7 +4,7 @@ import Wordle from './Wordle'
 import Header from "./Header";
 import AddWord from "./AddWord";
 import About from "./About"
-import WordAdded from "./WordAdded"
+
 import WordData from "./WordData"
 
 
