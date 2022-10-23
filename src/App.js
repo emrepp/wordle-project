@@ -1,10 +1,11 @@
 import { useEffect, useState } from "react";
-import { Routes, BrowserRouter, Route } from "react-router-dom";
+import { Routes, Route, BrowserRouter } from "react-router-dom";
 import Wordle from './Wordle'
 import Header from "./Header";
 import AddWord from "./AddWord";
 import About from "./About"
 import WordAdded from "./WordAdded"
+import WordData from "./WordData"
 
 
 
@@ -27,6 +28,7 @@ function App() {
       const randomWord = json[Math.floor(Math.random()*json.length)]
       setSolution(randomWord.word)
     })
+  
 
 
   }, [setSolution])
@@ -40,15 +42,16 @@ function App() {
         <Header />
         
         <Routes>
-          <Route path="/" element={<App/>} />
-          <Route path="/addWord" element={<AddWord />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/wordadded" element={<WordAdded/>}/>
+          <Route path="/wordle-project" element={<App/>} />
+          <Route path="/addWord" element={<AddWord />}/>
+          <Route path="/about" element={<About />}/>
           
-          
-        </Routes>
+          <Route path = "/worddata" element={<WordData/>}/>
+          </Routes>
+         
       </div>
-    </BrowserRouter>
+      </BrowserRouter>
+    
     
      
     <div>

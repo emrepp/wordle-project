@@ -1,60 +1,24 @@
 {
   "solutions": [
     {
-      "id": 1,
-      "word": "apple"
-    },
-    {
       "id": 2,
       "word": "arise"
-    },
-    {
-      "id": 3,
-      "word": "basis"
-    },
-    {
-      "id": 4,
-      "word": "admit"
     },
     {
       "id": 5,
       "word": "world"
     },
     {
-      "id": 6,
-      "word": "cycle"
-    },
-    {
-      "id": 7,
-      "word": "death"
-    },
-    {
-      "id": 8,
-      "word": "doubt"
-    },
-    {
       "id": 9,
       "word": "draft"
-    },
-    {
-      "id": 10,
-      "word": "climb"
     },
     {
       "id": 11,
       "word": "cross"
     },
     {
-      "id": 12,
-      "word": "focus"
-    },
-    {
       "id": 13,
       "word": "enter"
-    },
-    {
-      "id": 14,
-      "word": "crime"
     },
     {
       "id": 15,
@@ -227,6 +191,10 @@
     {
       "word": "candy",
       "id": 57
+    },
+    {
+      "word": "bears",
+      "id": 58
     }
   ]
 }

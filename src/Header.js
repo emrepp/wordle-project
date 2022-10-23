@@ -17,7 +17,7 @@ export default function NavBar() {
   return (
     <div className="header">
       <NavLink
-        to="/wordle-project"
+        to="/"
         exact="true"
         style={linkStyles}
         
@@ -39,6 +39,15 @@ export default function NavBar() {
        
       >
         +Word
+      </NavLink>
+
+      <NavLink
+        to="/worddata"
+        exact="true"
+        style={linkStyles}
+       
+      >
+       Data
       </NavLink>
 
      
