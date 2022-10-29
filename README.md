@@ -14,6 +14,10 @@ Through the app, the user can also add 5 letter words to be used as potential so
 Download this entire git repository to your computer and place in your desired install directory. If you do not currently have Node Package Manager (NPM), you'll need to install. You can follow their guide here: https://docs.npmjs.com/downloading-and-installing-node-js-and-npm. Navigate to wordle-project, run ```npm install```, and ```json-server --watch data/db.json --port 3001``` to access the json server. 
 
 
+Check to make sure it is running by viewing localhost:3001/solutions in your browser.
 
+Run npm start to view the app in your browser.
+
+App is deployed [here](emrepp.github.io/wordle-project).
 
 
