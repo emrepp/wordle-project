@@ -29,4 +29,8 @@ When you have made 6 total guesses, if you have not found the correct word, the 
 
 The db.json file contains all 5 letter strings. Each square that contains a previous guess is an object that contains a letter and color, each object is checked against the solution string to determine the color until all letters match the solution or you have run out.
 
+### Dependencies:
+Node Package Manager (NPM)
+
+
 
