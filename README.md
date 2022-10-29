@@ -20,4 +20,10 @@ Run npm start to view the app in your browser.
 
 App is deployed [here](emrepp.github.io/wordle-project).
 
+## About:
+
+The game itself takes in a guess when enter is clicked and 5 letters fill a row on a grid, the guess is checked against the word pulled from the local db.json file when the page loaded. Letters that are correct and in the right space turn green, correct but in the wrong space turn yellow, and the rest are gray.
+
+
+
 
